@@ -1,0 +1,10 @@
+.btn-xlarge {
+    padding: 18px 28px;
+    font-size: 30px !important;
+    line-height: normal !important;
+    -webkit-border-radius: 20px !important;
+       -moz-border-radius: 20px !important;
+            border-radius: 20px !important;
+    }
+	
+	//tout bon mais important pour l'override
