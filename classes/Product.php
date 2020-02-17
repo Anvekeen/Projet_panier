@@ -1,5 +1,4 @@
 <?php
-// pour tester dans tpl le contenu de product : {$products|var_dump}
 require_once ('./classes/Base_entity.php');
 
 class Product extends Base_entity
@@ -93,4 +92,3 @@ class Product extends Base_entity
     }
 	
 }
-?>

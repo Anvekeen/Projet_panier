@@ -1,5 +1,5 @@
 RewriteEngine On
-RewriteBase /panier/
+RewriteBase /
 RewriteCond %{REQUEST_FILENAME} !-d
 RewriteCond %{REQUEST_FILENAME} !-f
-RewriteRule ^(.+)$ index.php [QSA,L]
+RewriteRule ^(.+)$ /marc2/Projet_panier/ [QSA,L]

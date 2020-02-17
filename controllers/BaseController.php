@@ -14,14 +14,15 @@ abstract class BaseController
 	}
 	 
 	 protected function renderView()
-	{
+     {
+         //TODO If $assests removed in SmartyLoader, remove it here in getHeader (+BaseController)
 		$this->smarty->getHeader($this->getAssets(), $this->name);
 		$this->smarty->assign($this->getTemplateVars());
 		$this->smarty->display(strtolower($this->name).'.tpl');
 		$this->smarty->getFooter();
-	}	
-	 
-	 
+	}
+
+    //TODO If $assests removed in SmartyLoader, remove this method (+header.css in css folder)
 	 protected function getAssets()
 	{
 		return array("css" => array("./views/css/header.css"), "js"=>array());

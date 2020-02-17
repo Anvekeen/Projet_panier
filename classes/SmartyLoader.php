@@ -27,15 +27,15 @@ class SmartyLoader extends Smarty
      * @param $title : page title
      * @throws SmartyException
      */
+
+    //TODO ask Marc if I can remove $assests (+BaseController)
     public function getHeader($assets, $title, $bootstrap = true)
     {
         $this->assign(array(
             'title' => $title,
 			'assets'=>$assets,
 			'bootstrap'=>$bootstrap,
-		
         ));
-
         $this->display('header.tpl');
     }
 

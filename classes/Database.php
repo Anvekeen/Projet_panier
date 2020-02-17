@@ -1,6 +1,6 @@
 <?php
 
-define("DB_DSN", "mysql:dbname=shop;host=localhost");
+define("DB_DSN", "mysql:dbname=shop;host=localhost;charset=utf8mb4");
 define("DB_USER", "root");
 define("DB_PASS", "");
 

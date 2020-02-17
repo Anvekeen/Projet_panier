@@ -1,10 +1,18 @@
+
 .btn-xlarge {
-    padding: 18px 28px;
-    font-size: 30px !important;
-    line-height: normal !important;
-    -webkit-border-radius: 20px !important;
-       -moz-border-radius: 20px !important;
-            border-radius: 20px !important;
+    padding: 2% !important;
+    border-radius: 30px !important;
+    font-size: 3rem !important;
+    border-width: 0 !important;
     }
-	
-	//tout bon mais important pour l'override
+
+div.card a {
+    text-decoration:none !important;
+    color:inherit !important;
+}
+
+div.card a:hover {
+    color: green !important;
+}
+/*a:hover MUST come after a:link and a:visited
+a:active MUST come after a:hover*/

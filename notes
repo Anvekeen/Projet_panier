@@ -1,3 +1,55 @@
 note : pour importer la db, j'ai dû créer ma base de données (shop) puis seulement cliquer sur importer.
 Pas possible d'importer sans la BD créée?
 
+!!! Il est recommandé de ne pas utiliser la balise fermante en php (càd ?>)
+En effet, celle-ci peut causer des problèmes (lignes en plus, etc.)
+L'exception bien sûr serait pour des fichiers ne contenant pas uniquement du php !!!
+
+note : dans la classe Database, la définition de la variable db_dsn a du être modifié avec l'ajout du charset=utf8mb4
+à la fin pour pouvoir lire les caractères spéciaux venant de la db.
+Je pense que cela indique à la db de ne pas convertir les String en output en autre chose que le
+utf8 de sorte à ce que les caractères spéciaux soient maintenant lisibles lorsque
+ les données de la table sont ajoutés dans l'array.
+
+pour tester dans tpl le contenu de product : {$products|var_dump}
+
+Revoir le htaccess
+
+Bizarre, les liens hypertextes dans la navbar fonctionnent de ces deux façons :
+href="./accueil"
+href="accueil"
+Est-ce normal?
+
+
+Mettre !important pour override le css des classes
+
+bootstrap sert à utiliser des classes qui sont des "définitions" de css par défaut.
+
+
+Notes pour l'exam :
+propre controller & query ds db pour recherche
+
+catégorie
+
+
+cookies etc : signifie garder le manier meme en changeant de page
+
+systeme authentif compte créé en db avant
+
+
+contact : les champs à remplir nom prenom etc..
+ce qu'on encode doit etre bien formaté!
+
+dump de db et code-source requis au final
+
+
+
+Il faut tout d’abord marquer un endroit précis d'une page pour s'y rendre par un lien hypertexte. Les
+ancres se définissent grâce à l'attribut ID. La syntaxe est la suivante :
+<balise id="ancre"> ... </balise>
+L'appel d'une ancre se fait de la manière suivante :
+<a href="#ancre"> ... </a>
+Il est ainsi possible de permettre à l'utilisateur de se déplacer au sein d'une même page ou bien
+d'accéder à une section particulière d'une autre page :
+<a href="url/nom_du_fichier.html#ancre"> ... </a>
+

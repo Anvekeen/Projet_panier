@@ -1,4 +1,6 @@
 <head>
+	<meta charset='utf-8'>
+
     <title>{$title}</title>
 	
 	{if isset($assets) && is_array($assets)}
@@ -21,7 +23,7 @@
 <body>
 <header>
 	<nav class="navbar navbar-expand-lg navbar-light bg-light">
-		<a class="navbar-brand" href="#">
+		<a class="navbar-brand" href="./accueil">
 			<img src="views/img/derix.png" alt="logo du site" width="40" height="40">
 		</a> 
 	  
@@ -33,21 +35,21 @@
 		<div class="collapse navbar-collapse" id="navbarNav">
 			<ul class="navbar-nav">
 				<li class="nav-item active">
-					<a class="nav-link" href="#">Accueil <span class="sr-only">(current)</span></a> 
+					<a class="nav-link" href="accueil">Accueil<span class="sr-only">(current)</span></a>
 					{*faudra vérifier que le current se déplace?*}
 				</li>
 				<li class="nav-item">
-					<a class="nav-link" href="#">Produits</a>
+					<a class="nav-link" href="produits">Produits</a>
 				</li>
 				<li class="nav-item">
-					<a class="nav-link" href="#">FAQ</a>
+					<a class="nav-link" href="faq">FAQ</a>
 				</li>
 			</ul>
 		</div>
 	  
 		<form class="form-inline my-0">
-		  <input class="form-control" type="search" placeholder="Search" aria-label="Search">
-		  <button class="btn btn-outline-secondary mr-3" type="submit">Search</button>
+		  <input class="form-control" type="search" placeholder="t-shirt, jeans,..." aria-label="Search">
+		  <button class="btn btn-outline-danger mr-3" type="submit">Rechercher</button>
 		</form>
 
 		{*bouton connexion/panier (à changer?)*}

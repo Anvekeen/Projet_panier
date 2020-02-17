@@ -27,6 +27,7 @@ abstract class base_entity {
         {
             $entities[] = new static($id);
         }
+
         return $entities;
     }
 	

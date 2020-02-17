@@ -1,24 +1,20 @@
 <?php
 //enfant de basecontroller
 
-require_once('./controllers/BaseController.php');
-require_once('./classes/Database.php');
 require_once('./classes/Product.php');
 
 class HomeController extends BaseController
 {
-    protected $name = 'Home';
+    protected $name = 'Accueil';
 	
 	protected function getTemplateVars()
 	{
 		
 		return array(
 			"controller" => $this->name,
-			"products" => Product::getEntities(),
+			"products" => array_slice(Product::getEntities(), 0, 3),
 		);
 
 	}
 }
-
-?>
 
