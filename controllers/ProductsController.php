@@ -6,7 +6,7 @@ class ProductsController extends BaseController
 {
     protected $name = 'produits';
 
-    protected function checkcate()
+    protected function checkcategorie()
     {
         if (!isset($_GET['categorie']) || empty($_GET['categorie']))
         {
@@ -23,7 +23,7 @@ class ProductsController extends BaseController
         return array(
             "controller" => $this->name,
             "products" => Product::getEntities(),
-            "categorie" => $this->checkcate(),
+            "categorie" => $this->checkcategorie(),
         );
 
     }

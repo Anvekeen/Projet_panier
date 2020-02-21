@@ -105,7 +105,6 @@
                             </div>
                         </div>
                     </div>
-                    {else}La caté n'existe pas
                 {/if}
             {/foreach}
         </div>

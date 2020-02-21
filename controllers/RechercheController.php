@@ -6,26 +6,32 @@ class RechercheController extends BaseController
 {
     protected $name = 'recherche';
 
-    protected function searchEntities($search)
+    protected function search()
     {
         $products = Product::getEntities();
         $result = array();
-        foreach ($products as $product)
+        if (isset($_GET['achercher']))
         {
-            $a = $product->getName;
-            $b = $product->getDescription;
-
+            foreach ($products as $product)
+            {
+                $a = $product->getName();
+                if (stripos($a, $_GET['achercher']) !== false)
+                {
+                    $result[] = $product;
+                }
+            }
+            return $result;
+        } else {
+                return false;
+            }
         }
-        return $entities;
-    }
 
     protected function getTemplateVars()
     {
 
         return array(
             "controller" => $this->name,
-            "products" => Product::getEntities(),
-            "achercher" => $this->searchEntities($_POST['achercher']),
+            "products" => $this->search(),
         );
 
     }

@@ -77,3 +77,14 @@ ou (sans décla variable mais sinon pareil)
 
 
     Méthode post ou get pour rechercher?
+
+    // dans produits.tpl, quand on entre dans le loop foreach, aurait souhaité ajouter une façon de permettre
+    d'afficher "erreur : caté nexiste pas" si l'utilisateur entrait un truc random genre produits?categorie=77
+
+
+    Note sur stripos :
+    situation  - quand je mets if (stripos($a, $b)) et que ça ne prend pas en compte le premier caractère de $b
+    Le if ici signifie quand c'est vrai
+    Or, quand c'est vrai pour la première position de $b, cette position est égale à zéro
+    Du coup, la valeur que stripos renvoie est zéro... En d'autre termes, false !
+    D'où la nécessité de !== qui dit qui compare la valeur et le type, qui ici renverra alors true

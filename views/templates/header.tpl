@@ -54,12 +54,15 @@
                 <li class="nav-item ">
                     <a class="nav-link" href="faq">FAQ</a>
                 </li>
+                <li class="nav-item {if $title == 'contact'}{$active}{/if}">
+                    <a class="nav-link" href="contact">Contact{if $title == 'contact'}{$check}{/if}</a>
+                </li>
             </ul>
         </div>
 
         <form class="form-inline my-0" action="recherche" method="get">
             <input class="form-control" type="search" placeholder="t-shirt, jeans,..." aria-label="Search" name="achercher">
-            <button class="btn btn-outline-danger mr-3" type="button"><a href="recherche?achercher=" class="text-danger" style="text-decoration: none;">Rechercher</a></button>
+            <button class="btn btn-outline-danger mr-3" type="button"><a href="recherche" class="text-danger" style="text-decoration: none;">Rechercher</a></button>
         </form>
 
         {*bouton connexion/panier (à changer?)*}
