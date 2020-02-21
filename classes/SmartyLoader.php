@@ -24,15 +24,16 @@ class SmartyLoader extends Smarty
 
     /**
      * Compile and render header template.
+     * @param $assets : css added
      * @param $title : page title
+     * @param bool $bootstrap
      * @throws SmartyException
      */
 
-    //TODO ask Marc if I can remove $assests (+BaseController)
     public function getHeader($assets, $title, $bootstrap = true)
     {
         $this->assign(array(
-            'title' => $title,
+            'title' =>$title,
 			'assets'=>$assets,
 			'bootstrap'=>$bootstrap,
         ));

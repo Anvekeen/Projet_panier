@@ -44,12 +44,36 @@ dump de db et code-source requis au final
 
 
 
-Il faut tout d’abord marquer un endroit précis d'une page pour s'y rendre par un lien hypertexte. Les
-ancres se définissent grâce à l'attribut ID. La syntaxe est la suivante :
-<balise id="ancre"> ... </balise>
-L'appel d'une ancre se fait de la manière suivante :
-<a href="#ancre"> ... </a>
-Il est ainsi possible de permettre à l'utilisateur de se déplacer au sein d'une même page ou bien
-d'accéder à une section particulière d'une autre page :
-<a href="url/nom_du_fichier.html#ancre"> ... </a>
+    {$active = "active"}
+    {$reader = "<span class=\"sr-only\">(current)</span>"}
+    {$title|var_dump}
 
+comment mettre?
+
+en appelant les variables du controller
+
+<li class="nav-item {if isset($active1)}{$active1}{/if}">
+    <a class="nav-link" href="accueil">Accueil{if isset($check1)}{$check1}{/if}</a>
+
+ou (decla variable mais obligé de mettre if cond deux fois)
+
+{$active = 'active'}
+{$check = '<span class="sr-only">(current)</span>'}
+<li class="nav-item {if $title == 'accueil'}{$active}{/if}">
+    <a class="nav-link" href="accueil">Accueil{if $title == 'accueil'}{$check}{/if}</a>
+
+
+ou (sans décla variable mais sinon pareil)
+
+<li class="nav-item {if $title == 'accueil'}{'active'}{/if}">
+    <a class="nav-link" href="accueil">Accueil{if $title == 'accueil'}{'<span class="sr-only">(current)</span>'}{/if}</a>
+
+    note : dans accueil, modifier le css de section ne modifie que l'arrière-plan,
+    et pas les cards. C'est à cause des nombreux div à l'intérieur du section,
+    qui eux-mêmes modifient le css de leur propre façon.
+
+
+    faire du javascript
+
+
+    Méthode post ou get pour rechercher?

@@ -1,5 +1,34 @@
 RewriteEngine On
-RewriteBase /
+RewriteBase /Projet_panier/
 RewriteCond %{REQUEST_FILENAME} !-d
 RewriteCond %{REQUEST_FILENAME} !-f
-RewriteRule ^(.+)$ /marc2/Projet_panier/ [QSA,L]
+RewriteRule ^(.+)$ ./index.php [QSA,L]
+
+# Pourquoi RewriteBase alors qu'on peut écrire directement "RewriteRule ^(.+)$ /projet_panier/index.php [QSA,L]" ?
+# J'imagine que c'est pour le cas où l'on aurait d'autres htaccess dans les directory ?
+
+# Note : Pourquoi le RewriteCond ? Est-ce dans le cas où l'on aurait un fichier html précis, par exemple ?
+# Vu que dans ce cas-là, on ne serait pas redirigé vers index.
+# Question annexe : y a-t-il un moyen d'empêcher l'accès aux sous-dossiers ? (càd, quand mon url est projet_panier/views,
+# je rentre dans le dossier). Y a-t-il un moyen de rediriger ces liens, et sinon est-ce parce qu'on est en local ?
+
+# (.+) "du contenu". Exemple : /pages/(.+) s'applique à tous les urls précédés de /pages/
+
+# ^	Appelé ancrage, correspond au début de la chaîne. Exemple : ^a correspond à une chaîne qui commence par a
+
+# $	L'autre ancrage, correspond à la fin de la chaîne. Exemple : a$ correspond à une chaîne qui se termine par a
+
+# QSA : Lorsque l'URL de requête possède des arguments, le comportement par défaut de l'engine de RewritingRule
+# est de supprimer ces arguments et de les remplacer par leurs homologues générés lors de la réécriture.
+# Le drapeau [QSA] oblige le serveur à combiner ces paramètres à l'URL.
+# Détaillons l'exemple ci-dessous :
+# RewriteEngine On
+# RewriteRule /pages/(.+) /page.php?page=$1 [QSA]
+# Grâce au drapeau [QSA], la requête effectuée sur la page « /pages/123?one=two » sera redirigée sur « /pages.php?page=123&one=two ».
+# Si l'on avait omis le [QSA], le serveur aurait redirigé la page sur « /page.php?page=123 » en supprimant les arguments.
+
+# L : ESSENTIEL! Permet d'indiquer la fin de l'exécution de la réécriture. Sinon, le serveur pourrait looper !
+
+
+
+# note : possibilité d'ajouter des cookies avec [CO]

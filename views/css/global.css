@@ -1,18 +1,18 @@
+.carousel-inner > .item {
+    height: 200px !important;
+}
 
 .btn-xlarge {
     padding: 2% !important;
     border-radius: 30px !important;
     font-size: 3rem !important;
-    border-width: 0 !important;
+    /*vertical-align: center !important;
+    border-width: 0 !important;*/
     }
 
-div.card a {
-    text-decoration:none !important;
-    color:inherit !important;
-}
-
-div.card a:hover {
-    color: green !important;
+h5 a:hover {
+    color: dimgrey !important;
+     text-decoration: none !important;
 }
 /*a:hover MUST come after a:link and a:visited
 a:active MUST come after a:hover*/

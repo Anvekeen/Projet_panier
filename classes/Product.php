@@ -4,91 +4,122 @@ require_once ('./classes/Base_entity.php');
 class Product extends Base_entity
 {
     protected $id;
-    protected $name;
     protected $price;
     protected $stock;
-    protected $short_description;
-    protected $long_description;
+    protected $name;
+    protected $description;
+    protected $prodcatid;
 
     public static $definition = array(
         "table" => "product",
         "primary" => "id",
         "fields" => array(
             "id",
-            "name",
             "price",
             "stock",
-            "short_description",
-            "long_description",
+            "name",
+            "description",
+            "prodcatid",
         ),
     );
 
+    /**
+     * @return mixed
+     */
     public function getId()
     {
         return $this->id;
     }
 
-
-    public function setId($id)
+    /**
+     * @param mixed $id
+     */
+    public function setId($id): void
     {
         $this->id = $id;
     }
- 
-    public function getName()
+
+    /**
+     * @return mixed
+     */
+    public function getProdcatid()
     {
-        return $this->name;
+        return $this->prodcatid;
     }
 
-    public function setName($name)
+    /**
+     * @param mixed $prodcatid
+     */
+    public function setProdcatid($prodcatid): void
     {
-        $this->name = $name;
+        $this->prodcatid = $prodcatid;
     }
 
 
+
+    /**
+     * @return mixed
+     */
     public function getPrice()
     {
         return $this->price;
     }
 
-
-    public function setPrice($price)
+    /**
+     * @param mixed $price
+     */
+    public function setPrice($price): void
     {
         $this->price = $price;
     }
 
-
+    /**
+     * @return mixed
+     */
     public function getStock()
     {
         return $this->stock;
     }
 
-    public function setStock($stock)
+    /**
+     * @param mixed $stock
+     */
+    public function setStock($stock): void
     {
         $this->stock = $stock;
     }
 
- 
-    public function getShortDescription()
+    /**
+     * @return mixed
+     */
+    public function getName()
     {
-        return $this->short_description;
+        return $this->name;
+    }
+
+    /**
+     * @param mixed $name
+     */
+    public function setName($name): void
+    {
+        $this->name = $name;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getDescription()
+    {
+        return $this->description;
+    }
+
+    /**
+     * @param mixed $description
+     */
+    public function setDescription($description): void
+    {
+        $this->description = $description;
     }
 
 
-    public function setShortDescription($short_description)
-    {
-        $this->short_description = $short_description;
-    }
-
-
-    public function getLongDescription()
-    {
-        return $this->long_description;
-    }
-
-
-    public function setLongDescription($long_description)
-    {
-        $this->long_description = $long_description;
-    }
-	
 }

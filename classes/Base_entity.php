@@ -2,7 +2,7 @@
 
 require_once ('./classes/Database.php');
 
-abstract class base_entity {
+abstract class Base_entity {
 	
 	public static $definition = array();
 	
@@ -30,8 +30,18 @@ abstract class base_entity {
 
         return $entities;
     }
+
+    /*public static function searchEntities($search)
+    {
+        $ids = Database::getInstance()->query("SELECT id FROM shop.".static::$definition['table'].
+            " where categorie LIKE '%$search%' or name LIKE '%$search%' or description LIKE '%$search%'")->fetchAll(PDO::FETCH_COLUMN);
+        $entities = array();
+        foreach ($ids as $id)
+        {
+            $entities[] = new static($id);
+        }
+
+        return $entities;
+    }*/
 	
 }
-	
-
-?>

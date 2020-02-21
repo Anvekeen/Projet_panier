@@ -4,8 +4,9 @@ require_once('./classes/Product.php');
 
 class ProductController extends BaseController
 {
-    protected $name = 'Produit';
-	
+    protected $name = 'produit';
+
+
 	protected function getTemplateVars()
 	{
 		
