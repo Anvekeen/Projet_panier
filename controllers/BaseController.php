@@ -25,7 +25,7 @@ abstract class BaseController
     //Importe le CSS pour le site / permet d'importer également du js
 	 protected function getAssets()
 	{
-		return array("css" => array("views/css/global.css"), "js"=>array());
+		return array("css" => array("views/css/global.css"), "js"=>array("views/js/global.js"));
 	}
 	
 	//Initiation de la fonction d'importation des variables
