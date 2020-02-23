@@ -51,8 +51,8 @@
                 <li class="nav-item {if $title == 'produits'}{$active}{/if}">
                     <a class="nav-link" href="produits">Produits{if $title == 'produits'}{$check}{/if}</a>
                 </li>
-                <li class="nav-item ">
-                    <a class="nav-link" href="faq">FAQ</a>
+                <li class="nav-item {if $title == 'faq'}{$active}{/if}">
+                    <a class="nav-link" href="faq">FAQ{if $title == 'faq'}{$check}{/if}</a>
                 </li>
                 <li class="nav-item {if $title == 'contact'}{$active}{/if}">
                     <a class="nav-link" href="contact">Contact{if $title == 'contact'}{$check}{/if}</a>
@@ -62,7 +62,7 @@
 
         <form class="form-inline my-0" action="recherche" method="get">
             <input class="form-control" type="search" placeholder="t-shirt, jeans,..." aria-label="Search" name="achercher">
-            <button class="btn btn-outline-danger mr-3" type="button"><a href="recherche" class="text-danger" style="text-decoration: none;">Rechercher</a></button>
+            <button class="btn btn-outline-danger mr-3" type="submit">Rechercher</button>
         </form>
 
         {*bouton connexion/panier (à changer?)*}
