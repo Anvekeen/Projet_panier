@@ -1,5 +1,4 @@
 <?php
-//enfant de basecontroller
 
 require_once('./classes/Product.php');
 

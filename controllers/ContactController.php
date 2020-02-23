@@ -1,5 +1,4 @@
 <?php
-//enfant de basecontroller
 
 class ContactController extends BaseController
 {
@@ -14,4 +13,3 @@ class ContactController extends BaseController
         );
     }
 }
-

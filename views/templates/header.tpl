@@ -37,7 +37,6 @@
 <body class="d-flex flex-column h-100">
 <header class="header navbar navbar-expand-lg navbar-light bg-light">
 
-
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
             aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
 			<span class="navbar-toggler-icon">
@@ -71,9 +70,12 @@
         <button class="btn btn-outline-danger mr-3" type="submit">Rechercher</button>
     </form>
 
-    {*bouton connexion/panier (à changer?)*}
-    <div class="btn-group" role="group" aria-label="Basic example">
-        <button type="button" class="btn btn-secondary border-dark">Connexion</button>
+    <div class="btn-group" role="group" aria-label="Boutons de connexion et panier">
+        <h5 class="nav-text m-2">{if isset($smarty.session.utilisateur)}Bienvenue {$smarty.session.utilisateur} !</h5>
+        <a class="btn btn-secondary border-dark" href="utilisateur?logout" role="button">Déconnexion</a>
+        {else}
+            <a class="btn btn-secondary border-dark" href="utilisateur" role="button">Connexion</a>
+        {/if}
         <button type="button" class="btn btn-secondary border-dark">Panier</button>
     </div>
 </header>

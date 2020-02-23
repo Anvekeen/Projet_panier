@@ -4,7 +4,7 @@ foreach (glob(__DIR__."/controllers/*.php") as $filename)
 {
     include_once $filename;
 }
-
+require('views/configs/session_start.php');
 require_once('./classes/Product.php'); //est-ce utile de garder ceci ?
 
 $request = explode('/', $_SERVER['REQUEST_URI'])[2];
@@ -41,10 +41,11 @@ switch (strtolower($request)) {
         $controller = new ContactController();
     break;
 
-        //TODO ajouter l'accès à d'autres pages ici
+    case 'utilisateur' :
+        $controller = new UserController();
+    break;
 
     default:
-        //TODO améliorer la réponse?
         http_response_code(404);
 //        require __DIR__ . '/views/404.php';
     echo "Erreur 404 : Cette adresse n'existe pas sur le site!";

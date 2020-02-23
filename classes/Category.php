@@ -1,10 +1,3 @@
-SELECT * FROM Produits WHERE ProCatID=( SELECT CatID FROM Categories WHERE CatNom='Immobilier') ;
-
-en gros on peut dans $_get directement donner l'id correspondante ! ! !
-
-dans recherchecontroller que doit se trouver la méthode de recherche et pas dans base entity!!!
-
-
 <?php
 require_once ('./classes/Base_entity.php');
 
