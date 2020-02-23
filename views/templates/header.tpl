@@ -4,7 +4,7 @@
 
     <title>{$title}</title>
 
-    {if isset($assets) && is_array($assets)} {* Test si c'est un arrray*}
+    {if isset($assets) && is_array($assets)} {* Test si c'est un array*}
         {if !empty($assets['css'])} {* Test si des valeurs sont assignées à css, pourrait également y avoir du js*}
             {foreach $assets['css'] as $css}
                 <link rel="stylesheet" type="text/css" href="{$css}" media="screen">
@@ -29,48 +29,48 @@
 
 </head>
 <body class="d-flex flex-column h-100">
-    <header class="header navbar navbar-expand-lg navbar-light bg-light">
+<header class="header navbar navbar-expand-lg navbar-light bg-light">
 
 
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
-                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
 			<span class="navbar-toggler-icon">
 			</span>
-        </button>
-        <a class="navbar-brand" href="./accueil">
-            <img src="views/img/derix.png" alt="logo du site" width="40" height="40">
-        </a>
+    </button>
+    <a class="navbar-brand" href="./accueil">
+        <img src="views/img/derix.png" alt="logo du site" width="40" height="40">
+    </a>
 
-        <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav">
-                {$active = 'active'}
-                {$check = '<span class="sr-only">(current)</span>'}
-                <li class="nav-item {if $title == 'accueil'}{$active}{/if}">
-                    <a class="nav-link" href="accueil">Accueil{if $title == 'accueil'}{$check}{/if}</a>
-                </li>
-                <li class="nav-item {if $title == 'produits'}{$active}{/if}">
-                    <a class="nav-link" href="produits">Produits{if $title == 'produits'}{$check}{/if}</a>
-                </li>
-                <li class="nav-item {if $title == 'faq'}{$active}{/if}">
-                    <a class="nav-link" href="faq">FAQ{if $title == 'faq'}{$check}{/if}</a>
-                </li>
-                <li class="nav-item {if $title == 'contact'}{$active}{/if}">
-                    <a class="nav-link" href="contact">Contact{if $title == 'contact'}{$check}{/if}</a>
-                </li>
-            </ul>
-        </div>
+    <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
+            {$active = 'active'}
+            {$check = '<span class="sr-only">(current)</span>'}
+            <li class="nav-item {if $title == 'accueil'}{$active}{/if}">
+                <a class="nav-link" href="accueil">Accueil{if $title == 'accueil'}{$check}{/if}</a>
+            </li>
+            <li class="nav-item {if $title == 'produits'}{$active}{/if}">
+                <a class="nav-link" href="produits">Produits{if $title == 'produits'}{$check}{/if}</a>
+            </li>
+            <li class="nav-item {if $title == 'faq'}{$active}{/if}">
+                <a class="nav-link" href="faq">FAQ{if $title == 'faq'}{$check}{/if}</a>
+            </li>
+            <li class="nav-item {if $title == 'contact'}{$active}{/if}">
+                <a class="nav-link" href="contact">Contact{if $title == 'contact'}{$check}{/if}</a>
+            </li>
+        </ul>
+    </div>
 
-        <form class="form-inline my-0" action="recherche" method="get">
-            <input class="form-control" type="search" placeholder="t-shirt, jeans,..." aria-label="Search" name="achercher">
-            <button class="btn btn-outline-danger mr-3" type="submit">Rechercher</button>
-        </form>
+    <form class="form-inline my-0" action="recherche" method="get">
+        <input class="form-control" type="search" placeholder="t-shirt, jeans,..." aria-label="Search" name="achercher">
+        <button class="btn btn-outline-danger mr-3" type="submit">Rechercher</button>
+    </form>
 
-        {*bouton connexion/panier (à changer?)*}
-        <div class="btn-group" role="group" aria-label="Basic example">
-            <button type="button" class="btn btn-secondary border-dark">Connexion</button>
-            <button type="button" class="btn btn-secondary border-dark">Panier</button>
-        </div>
-    </header>
+    {*bouton connexion/panier (à changer?)*}
+    <div class="btn-group" role="group" aria-label="Basic example">
+        <button type="button" class="btn btn-secondary border-dark">Connexion</button>
+        <button type="button" class="btn btn-secondary border-dark">Panier</button>
+    </div>
+</header>
 
 
 

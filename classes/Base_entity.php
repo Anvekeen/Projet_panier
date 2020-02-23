@@ -31,7 +31,7 @@ abstract class Base_entity {
         return $entities;
     }
 
-    /*public static function searchEntities($search)
+    /*public static function searchEntities($search) // pas correct de mettre dans base_entity
     {
         $ids = Database::getInstance()->query("SELECT id FROM shop.".static::$definition['table'].
             " where categorie LIKE '%$search%' or name LIKE '%$search%' or description LIKE '%$search%'")->fetchAll(PDO::FETCH_COLUMN);
