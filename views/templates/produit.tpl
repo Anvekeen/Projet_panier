@@ -19,16 +19,16 @@
                             <div class="form-group">
                                 <label for="Taille" class="mb-0">Choisissez une taille...</label>
                                 <select class="form-control m-auto col-4" id="Taille">
-                                <option>S</option>
-                                <option>M</option>
-                                <option>L</option>
-                                <option>XL</option>
+                                    <option>S</option>
+                                    <option>M</option>
+                                    <option>L</option>
+                                    <option>XL</option>
                                 </select>
                             </div>
                             <br>
-                            <button class="btn btn-outline-dark btn-lg" type="submit" value="Submit">
+                            <a class="btn btn-outline-dark btn-lg" href="panier?add={$product->getId()}">
                                 Ajouter au panier
-                            </button>
+                            </a>
                         </div>
                     </div>
                 {/if}

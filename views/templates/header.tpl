@@ -76,7 +76,7 @@
         {else}
             <a class="btn btn-secondary border-dark" href="utilisateur" role="button">Connexion</a>
         {/if}
-        <button type="button" class="btn btn-secondary border-dark">Panier</button>
+        <a class="btn btn-secondary border-dark" href="panier" role="button">Panier</a>
     </div>
 </header>
 

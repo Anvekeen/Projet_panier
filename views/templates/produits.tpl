@@ -1,48 +1,43 @@
 <main role="main" class="">
-    <div class="d-flex mt-5 mr-3 ml-3">
-        <section class="col-2 mr-3 text-center">
 
+    <div class="d-flex mt-5 mr-3 ml-3">
+
+        <section class="col-2 mr-3 text-center">
             <div class="card">
                 <div class="card-text">
                     <h2 class="text-danger">Catégories</h2>
                 </div>
             </div>
-
             <div class="card">
                 <img class="card-img-top" src="./views/img/slide1.jpeg" alt="Card image cap">
                 <div class="card-body">
                     <h2><a class="card-link text-danger" href="produits">Toutes les <br> catégories</a></h2>
                 </div>
             </div>
-
             <div class="card">
                 <img class="card-img-top" src="./views/img/slide5.jpeg" alt="Card image cap">
                 <div class="card-body">
                     <h2><a class="card-link text-danger" href="produits?categorie=1">Jeans</a></h2>
                 </div>
             </div>
-
             <div class="card">
                 <img class="card-img-top" src="./views/img/slide3.jpeg" alt="Card image cap">
                 <div class="card-body">
                     <h2><a class="card-link text-danger" href="produits?categorie=2">Robes</a></h2>
                 </div>
             </div>
-
             <div class="card ">
                 <img class="card-img-top" src="./views/img/slide4.jpeg" alt="Card image cap">
                 <div class="card-body">
                     <h2><a class="card-link text-danger" href="produits?categorie=3">T-shirts</a></h2>
                 </div>
             </div>
-
             <div class="card">
                 <img class="card-img-top" src="./views/img/slide2.jpeg" alt="Card image cap">
                 <div class="card-body">
                     <h2><a class="card-link text-danger" href="produits?categorie=4">Pulls</a></h2>
                 </div>
             </div>
-
         </section>
 
 
@@ -70,10 +65,10 @@
                                         <a href="produit?id={$product->getId()}"
                                            class="btn btn-outline-danger btn-lg mr-3 mb-2">
                                             Plus d'info</a>
-                                        <button class="btn btn-outline-dark btn-lg ml-3 mb-2" type="submit"
-                                                value="Submit">
+                                        <a class="btn btn-outline-dark btn-lg ml-3 mb-2"
+                                           href="panier?add={$product->getId()}">
                                             Ajouter au panier
-                                        </button>
+                                        </a>
                                     </div>
                                 </div>
                             </div>
@@ -81,10 +76,7 @@
                     {/foreach}
                 </div>
             </div>
-
-
         </section>
-
 
     </div>
 
